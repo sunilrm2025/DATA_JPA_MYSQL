@@ -14,6 +14,18 @@ public class UserService {
 	@Autowired
 	private UserRepo userRepo;
 
+	public void getByCity() {
+		
+	List<UserSunilEntity> byCity = userRepo.findByCity("INDIA");
+	
+	byCity.forEach(cities->{
+		
+		System.out.println(cities);	});
+	
+	}
+		
+	
+	
 	public void test() {
 		System.out.println(userRepo.count()+"!!!User COunt ");
 		System.out.println("Records Presence or not ?:"+userRepo.existsById(666));
@@ -56,8 +68,7 @@ public class UserService {
 		userEntity.setUserEma1il("RAJA@gmail.com");
 		userEntity.setAge(30);
 		userEntity.setGender("Male");
-		userEntity.setCity("Patna");
-		userRepo.save(userEntity);
+		userEntity.setCity("InDIA");		userRepo.save(userEntity);
 		System.out.println("Save succesfully!!!!!!!!!!!!!!!");
 	}
 }

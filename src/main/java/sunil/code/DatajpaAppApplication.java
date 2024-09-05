@@ -16,7 +16,7 @@ public class DatajpaAppApplication {
 		ConfigurableApplicationContext context = SpringApplication.run(DatajpaAppApplication.class, args);
 
 		UserService userService = context.getBean(UserService.class);	
-	//	userService.saveUserDetails();
+	//userService.saveUserDetails();
 	//	userService.getUser();
 	//	userService.getUsers();
 
@@ -24,5 +24,7 @@ public class DatajpaAppApplication {
 		
 	//	userService.DeleteRecordById();
 		
-		userService.test();
-	}}
+	//	userService.test();
+		
+		userService.getByCity();
+		}}
